@@ -12,7 +12,7 @@ import (
 type CreateTaskRequest struct {
 	Title        string  `json:"title" validate:"required,min=1,max=100"         example:"Домашнее задание"`
 	Description  *string `json:"description" validate:"omitempty,min=1,max=1000" example:"Сделать до четверга домашнее задание по математике"`
-	AuthorUserID int     `json:"author_user_id" validate:"required"              example:"5"`
+	AuthorUserID int     `json:"author_user_id,string" validate:"required"              example:"5"`
 }
 
 type CreateTaskResponse TaskDTOResponse
